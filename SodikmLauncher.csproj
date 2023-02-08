@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>SodikmLauncher</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>10.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="resources\pantsicon.png" />
+    <None Remove="resources\faceicon.png" />
+    <None Remove="resources\colouricon.png" />
+    <None Remove="resources\logo.png" />
+    <None Remove="resources\leftarmicon.png" />
+    <None Remove="resources\rightarmicon.png" />
+    <None Remove="resources\torsoicon.png" />
+    <None Remove="resources\headicon.png" />
+    <None Remove="resources\tshirticon.png" />
+    <None Remove="resources\fabricicon3.ico" />
+    <None Remove="resources\shirticon.png" />
+    <None Remove="resources\rightlegicon.png" />
+    <None Remove="resources\leftlegicon.png" />
+    <None Remove="resources\haticon.png" />
+    <EmbeddedResource Include="resources\pantsicon.png" LogicalName="resources/pantsicon.png" />
+    <EmbeddedResource Include="resources\faceicon.png" LogicalName="resources/faceicon.png" />
+    <EmbeddedResource Include="resources\colouricon.png" LogicalName="resources/colouricon.png" />
+    <EmbeddedResource Include="resources\logo.png" LogicalName="resources/logo.png" />
+    <EmbeddedResource Include="resources\leftarmicon.png" LogicalName="resources/leftarmicon.png" />
+    <EmbeddedResource Include="resources\rightarmicon.png" LogicalName="resources/rightarmicon.png" />
+    <EmbeddedResource Include="resources\torsoicon.png" LogicalName="resources/torsoicon.png" />
+    <EmbeddedResource Include="resources\headicon.png" LogicalName="resources/headicon.png" />
+    <EmbeddedResource Include="resources\tshirticon.png" LogicalName="resources/tshirticon.png" />
+    <EmbeddedResource Include="resources\fabricicon3.ico" LogicalName="resources/fabricicon3.ico" />
+    <EmbeddedResource Include="resources\shirticon.png" LogicalName="resources/shirticon.png" />
+    <EmbeddedResource Include="resources\rightlegicon.png" LogicalName="resources/rightlegicon.png" />
+    <EmbeddedResource Include="resources\leftlegicon.png" LogicalName="resources/leftlegicon.png" />
+    <EmbeddedResource Include="resources\haticon.png" LogicalName="resources/haticon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DotNetZip">
+      <HintPath>..\..\..\..\Downloads\Sodikm\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="INIFileParser">
+      <HintPath>..\..\..\..\Downloads\Sodikm\INIFileParser.dll</HintPath>
+    </Reference>
+    <Reference Include="DiscordRPC">
+      <HintPath>..\..\..\..\Downloads\Sodikm\DiscordRPC.dll</HintPath>
+    </Reference>
+    <Reference Include="Titanium.Web.Proxy">
+      <HintPath>..\..\..\..\Downloads\Sodikm\Titanium.Web.Proxy.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

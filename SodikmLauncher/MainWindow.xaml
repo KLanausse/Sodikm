@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="SodikmLauncher.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:SodikmLauncher" Title="SODIKM" SizeToContent="WidthAndHeight" Height="Auto" Width="Auto" Margin="0" ResizeMode="CanMinimize" Icon="pack://application:,,,/Resources/FabricIcon3.ico" Loaded="Window_Loaded" Closed="Window_Closed">
+  <Grid Height="450" Width="400" Background="#2D2D2D">
+    <Image HorizontalAlignment="Center" Height="50" Margin="0,10,0,0" VerticalAlignment="Top" Width="200" Source="pack://application:,,,/Resources/Logo.png" Stretch="Uniform" StretchDirection="Both" />
+    <TabControl Margin="10,120,10,10">
+      <TabItem Header="Client">
+        <Grid Background="#1E1E1E">
+          <ListBox Name="ClientList" SelectionChanged="ClientList_SelectionChanged" />
+        </Grid>
+      </TabItem>
+      <TabItem Header="Map">
+        <Grid Background="#1E1E1E">
+          <ListBox Name="MapList" />
+        </Grid>
+      </TabItem>
+      <TabItem Header="Character">
+        <Grid Background="#1E1E1E">
+          <Button Name="ColourButton" HorizontalAlignment="Right" Margin="0,10,339,0" VerticalAlignment="Top" Width="25" Height="25">
+            <Image Source="pack://application:,,,/Resources/ColourIcon.png" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+          </Button>
+          <Button Name="HatButton" HorizontalAlignment="Right" Margin="0,10,309,0" VerticalAlignment="Top" Width="25" Height="25">
+            <Image Source="pack://application:,,,/Resources/HatIcon.png" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+          </Button>
+          <Button Name="ShirtButton" HorizontalAlignment="Right" Margin="0,10,279,0" VerticalAlignment="Top" Width="25" Height="25">
+            <Image Source="pack://application:,,,/Resources/ShirtIcon.png" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+          </Button>
+          <Button Name="PantsButton" HorizontalAlignment="Right" Margin="0,10,249,0" VerticalAlignment="Top" Width="25" Height="25">
+            <Image Source="pack://application:,,,/Resources/PantsIcon.png" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+          </Button>
+          <Button Name="TShirtButton" HorizontalAlignment="Right" Margin="0,10,219,0" VerticalAlignment="Top" Width="25" Height="25">
+            <Image Source="pack://application:,,,/Resources/TShirtIcon.png" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+          </Button>
+          <Button Name="FaceButton" HorizontalAlignment="Right" Margin="0,10,189,0" VerticalAlignment="Top" Width="25" Height="25">
+            <Image Source="pack://application:,,,/Resources/FaceIcon.png" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+          </Button>
+          <Button Name="TorsoButton" HorizontalAlignment="Right" Margin="0,10,159,0" VerticalAlignment="Top" Width="25" Height="25">
+            <Image Source="pack://application:,,,/Resources/TorsoIcon.png" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+          </Button>
+          <Button Name="LeftArmButton" HorizontalAlignment="Right" Margin="0,10,129,0" VerticalAlignment="Top" Width="25" Height="25">
+            <Image Source="pack://application:,,,/Resources/LeftArmIcon.png" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+          </Button>
+          <Button Name="RightArmButton" HorizontalAlignment="Right" Margin="0,10,99,0" VerticalAlignment="Top" Width="25" Height="25">
+            <Image Source="pack://application:,,,/Resources/RightArmIcon.png" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+          </Button>
+          <Button Name="LeftLegButton" HorizontalAlignment="Right" Margin="0,10,69,0" VerticalAlignment="Top" Width="25" Height="25">
+            <Image Source="pack://application:,,,/Resources/LeftLegIcon.png" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+          </Button>
+          <Button Name="RightLegButton" HorizontalAlignment="Right" Margin="0,10,39,0" VerticalAlignment="Top" Width="25" Height="25">
+            <Image Source="pack://application:,,,/Resources/RightLegIcon.png" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+          </Button>
+          <Button Name="HeadButton" HorizontalAlignment="Right" Margin="0,10,9,0" VerticalAlignment="Top" Width="25" Height="25">
+            <Image Source="pack://application:,,,/Resources/HeadIcon.png" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+          </Button>
+          <Label Name="SelectedCustomisation" Visibility="Hidden" Content="Color" HorizontalAlignment="Right" Margin="0,7,10,0" VerticalAlignment="Top" Foreground="#FFFFFFFF" FontSize="16" FontWeight="Bold" />
+          <Grid Name="ColourGrid" Margin="0,40,0,0" Visibility="Visible">
+            <Button Name="ColourHead" HorizontalAlignment="Right" Margin="0,25,267,0" VerticalAlignment="Top" Width="30" Height="30" />
+            <Button Name="ColourTorso" HorizontalAlignment="Left" Margin="67,60,0,0" VerticalAlignment="Top" Width="50" Height="60" />
+            <Button Name="ColourLeftArm" HorizontalAlignment="Left" Margin="37,60,0,0" VerticalAlignment="Top" Width="25" Height="60" />
+            <Button Name="ColourRightArm" HorizontalAlignment="Left" Margin="122,60,0,0" VerticalAlignment="Top" Width="25" Height="60" />
+            <Button Name="ColourLeftLeg" HorizontalAlignment="Right" Margin="0,125,282,0" VerticalAlignment="Top" Width="25" Height="60" />
+            <Button Name="ColourRightLeg" HorizontalAlignment="Right" Margin="0,125,257,0" VerticalAlignment="Top" Width="25" Height="60" />
+            <Button Name="ColourReset" Content="Reset" HorizontalAlignment="Right" Margin="0,217,314,0" VerticalAlignment="Top" Width="50" Height="25" Click="ColourReset_Click" />
+            <ItemsControl Name="ColourSelection" Margin="187,0,0,0">
+              <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                  <WrapPanel />
+                </ItemsPanelTemplate>
+              </ItemsControl.ItemsPanel>
+              <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                  <Label Height="17" Width="17" Margin="2" Background="{Binding Value}" MouseDown="ColourSelectionItem_MouseDown" />
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </ItemsControl>
+          </Grid>
+          <Grid Name="HatGrid" Margin="0,40,0,0" Visibility="Hidden" />
+          <Grid Name="ShirtGrid" Margin="0,40,0,0" Visibility="Hidden" />
+          <Grid Name="PantsGrid" Margin="0,40,0,0" Visibility="Hidden" />
+          <Grid Name="TShirtGrid" Margin="0,40,0,0" Visibility="Hidden" />
+          <Grid Name="FaceGrid" Margin="0,40,0,0" Visibility="Hidden" />
+          <Grid Name="TorsoGrid" Margin="0,40,0,0" Visibility="Hidden" />
+          <Grid Name="LeftArmGrid" Margin="0,40,0,0" Visibility="Hidden" />
+          <Grid Name="RightArmGrid" Margin="0,40,0,0" Visibility="Hidden" />
+          <Grid Name="LeftLegGrid" Margin="0,40,0,0" Visibility="Hidden" />
+          <Grid Name="RightLegGrid" Margin="0,40,0,0" Visibility="Hidden" />
+          <Grid Name="HeadGrid" Margin="0,40,0,0" Visibility="Hidden" />
+        </Grid>
+      </TabItem>
+      <TabItem Header="Misc">
+        <Grid Background="#1E1E1E">
+          <CheckBox Name="WipeGamePersistenceCheckBox" Content="Wipe Game Persistence on Host" HorizontalAlignment="Left" Margin="10,262,0,0" VerticalAlignment="Top" IsChecked="True" Click="WipeGamePersistenceCheckBox_Click" />
+          <CheckBox Name="ProxyRequestsOnlyFromClient" Content="Proxy Requests Only From Client" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" IsChecked="False" Click="ProxyRequestsFromClient_Click" />
+          <Button Name="OpenAssetPackManager" Content="Asset Pack Manager" HorizontalAlignment="Right" VerticalAlignment="Top" Width="120" Height="25" Margin="0,30,246,0" Click="OpenAssetPackManager_Click" />
+          <Button Name="ImportSOBLButton" Content="Import SOBL" HorizontalAlignment="Right" Margin="0,257,92,0" VerticalAlignment="Top" Width="72" Height="25" Click="ImportSOBLButton_Click" />
+          <Button Name="ExportSOBLButton" Content="Export SOBL" HorizontalAlignment="Right" Margin="0,257,10,0" VerticalAlignment="Top" Width="72" Height="25" Click="ExportSOBLButton_Click" />
+        </Grid>
+      </TabItem>
+    </TabControl>
+    <Label Name="SplashText" Content="The Future™" HorizontalAlignment="Center" Foreground="#FFFFFFFF" Margin="0,52,0,0" VerticalAlignment="Top" />
+    <Button Name="JoinButton" Content="Join" HorizontalAlignment="Right" Margin="0,86,120,0" VerticalAlignment="Top" Width="50" Height="25" Click="JoinButton_Click" />
+    <Button Name="HostButton" Content="Host" HorizontalAlignment="Right" Margin="0,86,65,0" VerticalAlignment="Top" Width="50" Height="25" Click="HostButton_Click" />
+    <Button Name="StudioButton" Content="Studio" HorizontalAlignment="Right" Margin="0,86,10,0" VerticalAlignment="Top" Width="50" Height="25" Click="StudioButton_Click" />
+    <Label Content="Username" HorizontalAlignment="Left" Margin="10,69,0,0" Foreground="#FFFFFFFF" VerticalAlignment="Top" />
+    <TextBox Name="UsernameBox" HorizontalAlignment="Left" Margin="16,90,0,0" Text="NotMatt" VerticalAlignment="Top" Width="120" TextChanged="UsernameBox_TextChanged" />
+    <Label Content="ID" HorizontalAlignment="Left" Margin="10,34,0,0" Foreground="#FFFFFFFF" VerticalAlignment="Top" />
+    <TextBox Name="IDBox" HorizontalAlignment="Left" Margin="16,55,0,0" Text="1337" VerticalAlignment="Top" Width="80" TextChanged="IDBox_TextChanged" />
+    <Label Content="IP" HorizontalAlignment="Left" Margin="304,5,0,0" Foreground="#FFFFFFFF" VerticalAlignment="Top" />
+    <TextBox Name="IPBox" HorizontalAlignment="Left" Margin="310,26,0,0" Text="localhost" VerticalAlignment="Top" Width="80" TextChanged="IPBox_TextChanged" />
+    <Label Content="Port" HorizontalAlignment="Left" Margin="304,39,0,0" Foreground="#FFFFFFFF" VerticalAlignment="Top" />
+    <TextBox Name="PortBox" HorizontalAlignment="Left" Margin="310,60,0,0" Text="53640" VerticalAlignment="Top" Width="80" TextChanged="PortBox_TextChanged" />
+  </Grid>
+</Window>

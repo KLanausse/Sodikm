@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="SodikmLauncher.AssetPackManager" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:SodikmLauncher" Title="Asset Pack Manager" SizeToContent="WidthAndHeight" Height="Auto" Width="Auto" ResizeMode="CanMinimize" Icon="pack://application:,,,/Resources/FabricIcon3.ico" Loaded="Window_Loaded">
+  <Grid Height="350" Width="500" Background="#2D2D2D">
+    <ListBox Name="AssetPackList" Background="#1E1E1E" Foreground="#FFFFFFFF" BorderBrush="#FF000000" Margin="10,10,250,10" SelectionChanged="AssetPackList_SelectionChanged">
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <TextBlock Text="{Binding Name}" Foreground="{Binding DisplayColour}" />
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </ListBox>
+    <Button Name="ResetButton" Content="Reset" HorizontalAlignment="Right" Margin="0,315,195,0" VerticalAlignment="Top" Width="50" Height="25" Click="ResetButton_Click" />
+    <Label Content="Name" HorizontalAlignment="Left" Margin="255,10,0,0" VerticalAlignment="Top" Foreground="#FFFFFFFF" FontSize="16" FontWeight="Bold" />
+    <TextBlock Name="Name" HorizontalAlignment="Left" Foreground="#FFFFFFFF" TextWrapping="WrapWithOverflow" Margin="260,38,0,0" VerticalAlignment="Top" Width="230" Height="40">Name</TextBlock>
+    <Label Content="Author" HorizontalAlignment="Left" Margin="255,218,0,0" VerticalAlignment="Top" Foreground="#FFFFFFFF" FontSize="16" FontWeight="Bold" />
+    <TextBlock Name="Author" HorizontalAlignment="Left" Foreground="#FFFFFFFF" TextWrapping="WrapWithOverflow" Margin="323,227,0,0" VerticalAlignment="Top" Width="166">Author</TextBlock>
+    <Label Content="Version" HorizontalAlignment="Left" Margin="255,249,0,0" VerticalAlignment="Top" Foreground="#FFFFFFFF" FontSize="16" FontWeight="Bold" />
+    <TextBlock Name="Version" HorizontalAlignment="Left" Foreground="#FFFFFFFF" TextWrapping="WrapWithOverflow" Margin="326,258,0,0" VerticalAlignment="Top" Width="164">Version</TextBlock>
+    <Label Content="Clients" HorizontalAlignment="Left" Margin="255,79,0,0" VerticalAlignment="Top" Foreground="#FFFFFFFF" FontSize="16" FontWeight="Bold" />
+    <TextBlock Name="Years" HorizontalAlignment="Left" Foreground="#FFFFFFFF" TextWrapping="WrapWithOverflow" Margin="260,115,0,0" VerticalAlignment="Top" Width="228" Height="60">Clients</TextBlock>
+    <Label Name="DisabledText" Content="This asset pack is disabled" HorizontalAlignment="Left" Margin="260,276,0,0" VerticalAlignment="Top" Foreground="#FFFF0000" FontSize="18" FontWeight="Bold" />
+    <Button Name="ToggleButton" Content="Toggle" HorizontalAlignment="Right" Margin="0,315,140,0" VerticalAlignment="Top" Width="50" Height="25" Click="ToggleButton_Click" />
+  </Grid>
+</Window>
